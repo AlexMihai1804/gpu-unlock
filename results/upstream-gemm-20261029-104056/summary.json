@@ -1,0 +1,288 @@
+{
+  "utc": "2026-10-29T08:40:59.332162+00:00",
+  "completed": true,
+  "status": "passed",
+  "training_performed": false,
+  "device_settings_changed": false,
+  "source": "https://github.com/Zagitta/gpu-unlock/issues/53",
+  "upstream_reporting": "https://github.com/Zagitta/gpu-unlock/blob/7eb51bccae0a0b7e599e084d971170e9a1e82d0c/.github/ISSUE_TEMPLATE/unlock-failure.yml",
+  "protocol": {
+    "n": 8192,
+    "warmup_seconds_per_mode": 20,
+    "samples": 5,
+    "iterations": 20,
+    "full_runs": 2,
+    "modes": [
+      "fp16",
+      "bf16",
+      "tf32",
+      "fp32"
+    ],
+    "accumulation": "FP32",
+    "output": "FP32",
+    "timing": "CUDA events"
+  },
+  "environment_difference": "Report: Linux torch 2.14.1+cu130; this run uses existing Windows torch 2.8.0+cu126",
+  "output_dtype_note": "Upstream report specifies accumulation, not output dtype; FP32 output is explicit here",
+  "temperature_cutoff": null,
+  "rows": [
+    {
+      "run": 1,
+      "mode": "fp16",
+      "median_ms": 24.9939453125,
+      "tflops": 43.99111921022373,
+      "sample_ms": [
+        25.06977233886719,
+        24.9939453125,
+        24.9786865234375,
+        25.121170043945312,
+        24.855091857910157
+      ],
+      "input_dtype": "torch.float16",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 789,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 1.3136322797044766e-05,
+      "correctness_passed": true,
+      "input_sha256": [
+        "8782dc33154377cb0784e0dee29a765eb252e91e8b089e692da68c6f49eee941",
+        "ca981aa15508eb2a07ca78761d76aff4856e1a864ea7a52b5329c54c556e3891"
+      ],
+      "output_sha256": "311f6de52e811af22cab8b9c7d72166cb8f3a93e87db275e8f4cca57294f6a82",
+      "active_samples": 43,
+      "median_active_power_w": 119.457,
+      "median_active_sm_mhz": 1500,
+      "maximum_temperature_c": 73
+    },
+    {
+      "run": 1,
+      "mode": "bf16",
+      "median_ms": 24.337144470214845,
+      "tflops": 45.17833343684357,
+      "sample_ms": [
+        24.612454223632813,
+        24.337144470214845,
+        24.314060974121094,
+        24.231219482421874,
+        24.42091522216797
+      ],
+      "input_dtype": "torch.bfloat16",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 806,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 1.1345325398082222e-05,
+      "correctness_passed": true,
+      "input_sha256": [
+        "2f2046575dfe04e02e5eba3721ddfcc04d60bfc9ccd8aac5fc6a2f30694dbb9c",
+        "3260569fa6c1739ec3cdb80bed94d912f9c7be964e511576560448d9d4271125"
+      ],
+      "output_sha256": "37b0638cf898504c1641a3ec3d6366ab771854e2d5c49453a82fcb298ec23d0f",
+      "active_samples": 41,
+      "median_active_power_w": 119.593,
+      "median_active_sm_mhz": 1537,
+      "maximum_temperature_c": 76
+    },
+    {
+      "run": 1,
+      "mode": "tf32",
+      "median_ms": 46.58314208984375,
+      "tflops": 23.60320876714154,
+      "sample_ms": [
+        46.37055969238281,
+        46.686090087890626,
+        46.72819213867187,
+        46.52840881347656,
+        46.58314208984375
+      ],
+      "input_dtype": "torch.float32",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 427,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 0.00029198937085308884,
+      "correctness_passed": true,
+      "input_sha256": [
+        "f54a1e6a35e9df50a0821e0e8b1334518262e0c384fc545a601f18bae1c9d28f",
+        "b56a81fbc0530d74c11a5f2f722d35ae58f639151dd3614785691eea29281169"
+      ],
+      "output_sha256": "abb461a1cab07eb1bca584c0ce64f55f95256b4d26008a11bacc231949395dbf",
+      "active_samples": 47,
+      "median_active_power_w": 119.669,
+      "median_active_sm_mhz": 1597,
+      "maximum_temperature_c": 79
+    },
+    {
+      "run": 1,
+      "mode": "fp32",
+      "median_ms": 117.57557373046875,
+      "tflops": 9.35153104416509,
+      "sample_ms": [
+        117.62335205078125,
+        117.33406982421874,
+        117.7756103515625,
+        117.48756103515625,
+        117.57557373046875
+      ],
+      "input_dtype": "torch.float32",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 170,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 1.6098455254733113e-06,
+      "correctness_passed": true,
+      "input_sha256": [
+        "f54a1e6a35e9df50a0821e0e8b1334518262e0c384fc545a601f18bae1c9d28f",
+        "b56a81fbc0530d74c11a5f2f722d35ae58f639151dd3614785691eea29281169"
+      ],
+      "output_sha256": "f2e9f0bdc1723c5068034486c59ba0f56e64d98de55b3e43d70ec59270e23a5f",
+      "active_samples": 61,
+      "median_active_power_w": 119.608,
+      "median_active_sm_mhz": 1560,
+      "maximum_temperature_c": 80
+    },
+    {
+      "run": 2,
+      "mode": "fp16",
+      "median_ms": 25.478912353515625,
+      "tflops": 43.153789789786195,
+      "sample_ms": [
+        25.459039306640626,
+        25.495091247558594,
+        25.53046569824219,
+        25.478912353515625,
+        25.299607849121095
+      ],
+      "input_dtype": "torch.float16",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 773,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 1.3136322797044766e-05,
+      "correctness_passed": true,
+      "input_sha256": [
+        "8782dc33154377cb0784e0dee29a765eb252e91e8b089e692da68c6f49eee941",
+        "ca981aa15508eb2a07ca78761d76aff4856e1a864ea7a52b5329c54c556e3891"
+      ],
+      "output_sha256": "311f6de52e811af22cab8b9c7d72166cb8f3a93e87db275e8f4cca57294f6a82",
+      "active_samples": 43,
+      "median_active_power_w": 119.21,
+      "median_active_sm_mhz": 1470,
+      "maximum_temperature_c": 80
+    },
+    {
+      "run": 2,
+      "mode": "bf16",
+      "median_ms": 24.78709716796875,
+      "tflops": 44.358224778206356,
+      "sample_ms": [
+        24.846124267578126,
+        24.697036743164062,
+        24.78709716796875,
+        24.845254516601564,
+        24.76057586669922
+      ],
+      "input_dtype": "torch.bfloat16",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 795,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 1.1345325398082222e-05,
+      "correctness_passed": true,
+      "input_sha256": [
+        "2f2046575dfe04e02e5eba3721ddfcc04d60bfc9ccd8aac5fc6a2f30694dbb9c",
+        "3260569fa6c1739ec3cdb80bed94d912f9c7be964e511576560448d9d4271125"
+      ],
+      "output_sha256": "37b0638cf898504c1641a3ec3d6366ab771854e2d5c49453a82fcb298ec23d0f",
+      "active_samples": 42,
+      "median_active_power_w": 119.7945,
+      "median_active_sm_mhz": 1515.0,
+      "maximum_temperature_c": 81
+    },
+    {
+      "run": 2,
+      "mode": "tf32",
+      "median_ms": 46.955572509765624,
+      "tflops": 23.415998762390302,
+      "sample_ms": [
+        47.05500183105469,
+        46.8347900390625,
+        46.957516479492185,
+        46.7525634765625,
+        46.955572509765624
+      ],
+      "input_dtype": "torch.float32",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 421,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 0.00029198937085308884,
+      "correctness_passed": true,
+      "input_sha256": [
+        "f54a1e6a35e9df50a0821e0e8b1334518262e0c384fc545a601f18bae1c9d28f",
+        "b56a81fbc0530d74c11a5f2f722d35ae58f639151dd3614785691eea29281169"
+      ],
+      "output_sha256": "abb461a1cab07eb1bca584c0ce64f55f95256b4d26008a11bacc231949395dbf",
+      "active_samples": 48,
+      "median_active_power_w": 119.588,
+      "median_active_sm_mhz": 1582.0,
+      "maximum_temperature_c": 82
+    },
+    {
+      "run": 2,
+      "mode": "fp32",
+      "median_ms": 118.1666259765625,
+      "tflops": 9.304756048413198,
+      "sample_ms": [
+        118.30357666015625,
+        118.10308837890625,
+        118.185986328125,
+        118.139697265625,
+        118.1666259765625
+      ],
+      "input_dtype": "torch.float32",
+      "output_dtype": "torch.float32",
+      "warmup_gemms": 169,
+      "measured_gemms": 100,
+      "full_output_finite": true,
+      "reference": "2048 CPU FP64 values from actual quantized inputs",
+      "sample_relative_l2": 1.6098455254733113e-06,
+      "correctness_passed": true,
+      "input_sha256": [
+        "f54a1e6a35e9df50a0821e0e8b1334518262e0c384fc545a601f18bae1c9d28f",
+        "b56a81fbc0530d74c11a5f2f722d35ae58f639151dd3614785691eea29281169"
+      ],
+      "output_sha256": "f2e9f0bdc1723c5068034486c59ba0f56e64d98de55b3e43d70ec59270e23a5f",
+      "active_samples": 61,
+      "median_active_power_w": 119.704,
+      "median_active_sm_mhz": 1537,
+      "maximum_temperature_c": 83
+    }
+  ],
+  "torch": "2.8.0+cu126",
+  "cuda_runtime": "12.6",
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:01:00.0, 0x252010DE, 580.97, 94.06.38.00.38, 6144",
+    "stderr": ""
+  },
+  "flags": {
+    "allow_fp16_reduced_precision_reduction": false,
+    "allow_bf16_reduced_precision_reduction": false,
+    "allow_fp16_accumulation": false
+  },
+  "source_sha256": "d6da80409a515daa71f8e7ae821fead76e67546a8acc435ad0623a54b836c081",
+  "offsets_preserved": true,
+  "finished_utc": "2026-10-29T08:44:28.991387+00:00",
+  "maximum_temperature_c": 83,
+  "hardware_events": []
+}

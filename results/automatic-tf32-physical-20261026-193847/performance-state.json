@@ -1,0 +1,57 @@
+{
+  "method": "matched-GEMM-with-coarse-SM-clock-normalization-v2",
+  "classification": "consistent_with_unlocked",
+  "unlocked_performance_supported": true,
+  "direct_selector_read": false,
+  "limits": [
+    "SM telemetry covers active phase samples including warmup, not exact CUDA event intervals",
+    "Inference corroborates boot logs; it is not a direct register read or exact IPC measurement"
+  ],
+  "modes": {
+    "fp16": {
+      "tflops": 42.03861172850384,
+      "active_samples": 8,
+      "median_sm_mhz": 1425.0,
+      "median_power_w": 113.05,
+      "maximum_temperature_c": 66.0,
+      "tflops_per_ghz": 29.50078016035357,
+      "normalized_vs_locked": 1.9150703146487715,
+      "normalized_vs_unlocked": 0.9938109567173118
+    },
+    "bf16": {
+      "tflops": 45.0763762550089,
+      "active_samples": 9,
+      "median_sm_mhz": 1500.0,
+      "median_power_w": 114.11,
+      "maximum_temperature_c": 68.0,
+      "tflops_per_ghz": 30.050917503339267,
+      "normalized_vs_locked": 1.9933422682540134,
+      "normalized_vs_unlocked": 1.014993778489193
+    },
+    "tf32": {
+      "tflops": 23.46658649612363,
+      "active_samples": 12,
+      "median_sm_mhz": 1582.0,
+      "median_power_w": 119.215,
+      "maximum_temperature_c": 69.0,
+      "tflops_per_ghz": 14.83349336038156,
+      "normalized_vs_locked": 1.965281602759169,
+      "normalized_vs_unlocked": 1.9611652957420576
+    },
+    "fp32": {
+      "tflops": 9.326367123063172,
+      "active_samples": 17,
+      "median_sm_mhz": 1545.0,
+      "median_power_w": 119.79,
+      "maximum_temperature_c": 71.0,
+      "tflops_per_ghz": 6.0364835747981695,
+      "normalized_vs_locked": 1.0027167645197577,
+      "normalized_vs_unlocked": 0.9999171874029714
+    }
+  },
+  "controls_per_clock_consistent": true,
+  "tf32_classification": "consistent_with_full_rate",
+  "tf32_unlocked_performance_supported": true,
+  "locked_reference": "results/baseline-2026-10-25.json",
+  "unlocked_reference": "results/unlock-v3-B2-2026-10-25.json"
+}

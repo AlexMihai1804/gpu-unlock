@@ -1,0 +1,258 @@
+{
+  "passed": true,
+  "checks": {
+    "completed": true,
+    "requested_duration_met": true,
+    "minimum_requested_load": true,
+    "numeric_checks": true,
+    "both_modes": true,
+    "full_outputs_identical_before_after": true,
+    "no_unexpected_driver_hardware_events": true,
+    "temperature_below_stop": true,
+    "same_boot": true,
+    "secure_boot_registry_before_after": true,
+    "fresh_boot_trust": true,
+    "firmware_evidence_same_boot": true,
+    "unlocked_performance_before_after": true
+  },
+  "results": {
+    "fp16": {
+      "blocks": 208,
+      "gemm_count": 20800,
+      "cuda_seconds": 561.3497443847656,
+      "median_tflops": 40.704797005017156,
+      "min_tflops": 37.25885797545707,
+      "max_tflops": 41.81459564384368,
+      "p5_tflops": 40.23874075382685,
+      "p95_tflops": 41.66149016510758,
+      "first_quarter_median_tflops": 40.6944483405865,
+      "last_quarter_median_tflops": 41.34219421867189,
+      "last_vs_first_quarter_percent": 1.5917303330031052,
+      "all_numeric_checks_passed": true,
+      "max_sample_relative_l2": 1.2782238036747145e-05
+    },
+    "bf16": {
+      "blocks": 208,
+      "gemm_count": 20800,
+      "cuda_seconds": 545.2468251953125,
+      "median_tflops": 41.88695783531544,
+      "min_tflops": 39.85155592722034,
+      "max_tflops": 42.856727399754696,
+      "p5_tflops": 41.575302417645794,
+      "p95_tflops": 42.68217096523091,
+      "first_quarter_median_tflops": 41.93581222266472,
+      "last_quarter_median_tflops": 42.36368218237084,
+      "last_vs_first_quarter_percent": 1.0202972996785409,
+      "all_numeric_checks_passed": true,
+      "max_sample_relative_l2": 1.1085769855511723e-05
+    }
+  },
+  "wall_seconds": 1202.5025919,
+  "cuda_seconds": 1106.596569580078,
+  "maximum_temperature_c": 85.0,
+  "validated_blocks": 416,
+  "matched_before_after": [
+    {
+      "mode": "fp16",
+      "before_tflops": 42.4189286560721,
+      "after_tflops": 42.34164895493134,
+      "gain_percent": -0.1821821144219249,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "bf16",
+      "before_tflops": 43.77438298926808,
+      "after_tflops": 43.72749737521754,
+      "gain_percent": -0.10710742413441166,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "tf32",
+      "before_tflops": 13.693922226477278,
+      "after_tflops": 13.66280164930045,
+      "gain_percent": -0.22725831695360466,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "fp32",
+      "before_tflops": 9.235360687600295,
+      "after_tflops": 9.228209331300029,
+      "gain_percent": -0.07743451005511881,
+      "output_bit_identical": true
+    }
+  ],
+  "unexpected_events": [],
+  "known_corrected_network_events": 0,
+  "limitations": [
+    "Fixed GEMM inputs; this is not all-application or sleep/resume validation",
+    "Per-block hashes cover final GEMM outputs, not every intermediate multiply",
+    "CUDA event timings exclude output validation and telemetry overhead"
+  ],
+  "scope": "Performance profile after user restart; continuous workload",
+  "tensor_to_tf32_ratios": {
+    "before": {
+      "fp16": 3.0976463831563796,
+      "bf16": 3.1966285674260697
+    },
+    "after": {
+      "fp16": 3.0990458649525423,
+      "bf16": 3.200478093558244
+    }
+  },
+  "performance_matches_unlocked_pattern_before_after": true,
+  "performance_states": {
+    "before": {
+      "method": "matched-GEMM-with-coarse-SM-clock-normalization-v1",
+      "classification": "consistent_with_unlocked",
+      "unlocked_performance_supported": true,
+      "direct_selector_read": false,
+      "limits": [
+        "SM telemetry covers active phase samples including warmup, not exact CUDA event intervals",
+        "Inference corroborates boot logs; it is not a direct register read or exact IPC measurement"
+      ],
+      "modes": {
+        "fp16": {
+          "tflops": 42.4189286560721,
+          "active_samples": 7,
+          "median_sm_mhz": 1417.0,
+          "median_power_w": 116.12,
+          "maximum_temperature_c": 77.0,
+          "tflops_per_ghz": 29.93572946794079,
+          "normalized_vs_locked": 1.943305449543839,
+          "normalized_vs_unlocked": 1.0084633620146368
+        },
+        "bf16": {
+          "tflops": 43.77438298926808,
+          "active_samples": 6,
+          "median_sm_mhz": 1473.5,
+          "median_power_w": 116.065,
+          "maximum_temperature_c": 75.0,
+          "tflops_per_ghz": 29.7077590697442,
+          "normalized_vs_locked": 1.9705798281282876,
+          "normalized_vs_unlocked": 1.0034033278782795
+        },
+        "tf32": {
+          "tflops": 13.693922226477278,
+          "active_samples": 9,
+          "median_sm_mhz": 1807.0,
+          "median_power_w": 117.24,
+          "maximum_temperature_c": 76.0,
+          "tflops_per_ghz": 7.578263545366507,
+          "normalized_vs_locked": 1.0040400844717925,
+          "normalized_vs_unlocked": 1.0019371098958485
+        },
+        "fp32": {
+          "tflops": 9.235360687600295,
+          "active_samples": 13,
+          "median_sm_mhz": 1530.0,
+          "median_power_w": 119.21,
+          "maximum_temperature_c": 76.0,
+          "tflops_per_ghz": 6.0361834559479055,
+          "normalized_vs_locked": 1.00266691195265,
+          "normalized_vs_unlocked": 0.9998674740238287
+        }
+      },
+      "controls_per_clock_consistent": true,
+      "locked_reference": "results/baseline-2026-10-25.json",
+      "unlocked_reference": "results/unlock-v3-B2-2026-10-25.json"
+    },
+    "after": {
+      "method": "matched-GEMM-with-coarse-SM-clock-normalization-v1",
+      "classification": "consistent_with_unlocked",
+      "unlocked_performance_supported": true,
+      "direct_selector_read": false,
+      "limits": [
+        "SM telemetry covers active phase samples including warmup, not exact CUDA event intervals",
+        "Inference corroborates boot logs; it is not a direct register read or exact IPC measurement"
+      ],
+      "modes": {
+        "fp16": {
+          "tflops": 42.34164895493134,
+          "active_samples": 9,
+          "median_sm_mhz": 1425.0,
+          "median_power_w": 119.77,
+          "maximum_temperature_c": 80.0,
+          "tflops_per_ghz": 29.71343786310971,
+          "normalized_vs_locked": 1.9288751852832438,
+          "normalized_vs_unlocked": 1.0009748877686475
+        },
+        "bf16": {
+          "tflops": 43.72749737521754,
+          "active_samples": 9,
+          "median_sm_mhz": 1492.0,
+          "median_power_w": 119.84,
+          "maximum_temperature_c": 77.0,
+          "tflops_per_ghz": 29.3079741120761,
+          "normalized_vs_locked": 1.944061228346986,
+          "normalized_vs_unlocked": 0.9899002711173137
+        },
+        "tf32": {
+          "tflops": 13.66280164930045,
+          "active_samples": 14,
+          "median_sm_mhz": 1822.0,
+          "median_power_w": 119.47,
+          "maximum_temperature_c": 78.0,
+          "tflops_per_ghz": 7.498793440889379,
+          "normalized_vs_locked": 0.9935111328281162,
+          "normalized_vs_unlocked": 0.9914302112737206
+        },
+        "fp32": {
+          "tflops": 9.228209331300029,
+          "active_samples": 18,
+          "median_sm_mhz": 1537.0,
+          "median_power_w": 119.63,
+          "maximum_temperature_c": 77.0,
+          "tflops_per_ghz": 6.004039903253109,
+          "normalized_vs_locked": 0.9973275651692248,
+          "normalized_vs_unlocked": 0.9945430346535461
+        }
+      },
+      "controls_per_clock_consistent": true,
+      "locked_reference": "results/baseline-2026-10-25.json",
+      "unlocked_reference": "results/unlock-v3-B2-2026-10-25.json"
+    }
+  },
+  "fresh_firmware_trust_collection": true,
+  "load_policy": "continuous",
+  "application_temperature_stop_enabled": false,
+  "sustained_70_percent_load_met": true,
+  "cuda_load_fraction": 0.9202446439900086,
+  "cooling_pauses": 0,
+  "cooling_seconds": 0.0,
+  "limiting_factors": {
+    "scope": "Observed active telemetry samples, utilization >=90%; not exact CUDA-event duty attribution",
+    "active_samples": 1020,
+    "limiter_sample_counts": {
+      "sw_power_cap": 1003,
+      "hw_slowdown": 0,
+      "sw_thermal_slowdown": 0,
+      "hw_thermal_slowdown": 0,
+      "hw_power_brake": 0,
+      "applications_clocks": 0,
+      "sync_boost": 0,
+      "display_clocks": 0
+    },
+    "limiter_sample_percent": {
+      "sw_power_cap": 98.33333333333333,
+      "hw_slowdown": 0.0,
+      "sw_thermal_slowdown": 0.0,
+      "hw_thermal_slowdown": 0.0,
+      "hw_power_brake": 0.0,
+      "applications_clocks": 0.0,
+      "sync_boost": 0.0,
+      "display_clocks": 0.0
+    },
+    "maximum_temperature_c": 85.0,
+    "median_active_power_w": 113.88,
+    "observed_current_power_limit_w": {
+      "min": 110.8,
+      "median": 113.29,
+      "max": 117.93
+    },
+    "snapshot_count": 13,
+    "active_load_cap_snapshots": 13,
+    "source": "https://docs.nvidia.com/deploy/archive/R535/nvml-api/group__nvmlClocksEventReasons.html"
+  },
+  "firmware_evidence": "C:\\Projects\\gpu-unlock\\results\\automatic-physical-20261026-115053",
+  "user_selected_performance": true
+}

@@ -1,0 +1,36 @@
+# Local dependencies, build products and measurements
+.venv/
+.venv-vm/
+vendor/
+tools/llvm/
+tools/downloads/
+build/
+results/
+local-data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+
+# Machine-specific profiles, trust material and firmware
+config/board.reviewed.json
+config/board.local.json
+keys/
+roms/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.rom
+*.ROM
+*.efi
+*.EFI
+*.bin
+*.exe
+*.dll
+*.zip
+*.pth
+*.npy

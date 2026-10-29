@@ -1,0 +1,201 @@
+{
+  "measurement_passed": true,
+  "checks": {
+    "completed": true,
+    "all_three_modes": true,
+    "full_dataset": true,
+    "source_matches": true,
+    "training_order_matches": true,
+    "original_checkpoint_unchanged": true,
+    "original_dataset_unchanged": true,
+    "all_mode_checks": true,
+    "zero_graphics_and_memory_offsets": true,
+    "offsets_unchanged": true,
+    "same_boot_secure_boot": true,
+    "no_gpu_settings_changed": true,
+    "launcher_completed": true
+  },
+  "mode_checks": {
+    "tf32": {
+      "full_train_and_test": true,
+      "all_steps_recorded": true,
+      "examples_match": true,
+      "finite_loss_and_gradients": true,
+      "finite_parameters_and_updates": true,
+      "no_fp16_scale_backoff": true,
+      "checkpoint_hash_matches": true
+    },
+    "bf16": {
+      "full_train_and_test": true,
+      "all_steps_recorded": true,
+      "examples_match": true,
+      "finite_loss_and_gradients": true,
+      "finite_parameters_and_updates": true,
+      "no_fp16_scale_backoff": true,
+      "checkpoint_hash_matches": true
+    },
+    "fp16": {
+      "full_train_and_test": true,
+      "all_steps_recorded": true,
+      "examples_match": true,
+      "finite_loss_and_gradients": true,
+      "finite_parameters_and_updates": true,
+      "no_fp16_scale_backoff": true,
+      "checkpoint_hash_matches": true
+    }
+  },
+  "hardware_health_clean": true,
+  "hardware_events": [],
+  "limiter_telemetry": {
+    "tf32": {
+      "samples": 849,
+      "active_samples": 812,
+      "median_utilization_percent": 99,
+      "limiter_sample_percent": {
+        "power": 76.60098522167488,
+        "sw_thermal": 24.63054187192118,
+        "hw_thermal": 1.2315270935960592,
+        "hw_power_brake": 0.0
+      }
+    },
+    "bf16": {
+      "samples": 125,
+      "active_samples": 80,
+      "median_utilization_percent": 92,
+      "limiter_sample_percent": {
+        "power": 100.0,
+        "sw_thermal": 0.0,
+        "hw_thermal": 0.0,
+        "hw_power_brake": 0.0
+      }
+    },
+    "fp16": {
+      "samples": 735,
+      "active_samples": 689,
+      "median_utilization_percent": 99,
+      "limiter_sample_percent": {
+        "power": 55.87808417997097,
+        "sw_thermal": 45.86357039187228,
+        "hw_thermal": 1.3062409288824384,
+        "hw_power_brake": 0.0
+      }
+    }
+  },
+  "baseline_validation": {
+    "examples": 10000,
+    "top1_percent": 87.98,
+    "loss": 0.6064260290145874,
+    "wall_seconds": 17.910861000000295,
+    "precision": "strict FP32"
+  },
+  "runs": [
+    {
+      "mode": "tf32",
+      "examples": 50000,
+      "steps": 782,
+      "wall_seconds": 442.4703735999992,
+      "images_per_second": 113.00191602251964,
+      "data_wait_seconds": 7.317587400006232,
+      "median_cuda_stream_step_ms": 538.3889770507812,
+      "train_loss": 0.38398553590774537,
+      "train_top1_percent": 91.29,
+      "first_50_batch_loss": 0.3810001005232334,
+      "last_50_batch_loss": 0.33859167277812957,
+      "peak_allocated_mib": 2967.96923828125,
+      "peak_reserved_mib": 2988.0,
+      "finite_gradients_checked_every_step": true,
+      "all_parameters_finite": true,
+      "classifier_weight_change_l2": 0.0049820635467767715,
+      "optimizer_step_count": 782,
+      "warmup_included_in_epoch_time": false,
+      "validation": {
+        "examples": 10000,
+        "top1_percent": 87.85,
+        "loss": 0.5024487820625305,
+        "wall_seconds": 10.62879890000022,
+        "precision": "strict FP32"
+      },
+      "checkpoint": "C:\\Projects\\gpu-unlock\\results\\training-cifar100-20261026-205139\\finetuned-tf32.pth",
+      "checkpoint_sha256": "5178a5ecbcca53063eede36529b53453839c78d5b9bd9759899dd9988f6c0cf4",
+      "telemetry": {
+        "active_samples": 812,
+        "median_power_w": 119.1995,
+        "median_sm_mhz": 1905.0,
+        "maximum_temperature_c": 87
+      }
+    },
+    {
+      "mode": "bf16",
+      "examples": 50000,
+      "steps": 782,
+      "wall_seconds": 65.71438040000066,
+      "images_per_second": 760.8684689051636,
+      "data_wait_seconds": 7.598620899986599,
+      "median_cuda_stream_step_ms": 52.58123207092285,
+      "train_loss": 0.3848458404541016,
+      "train_top1_percent": 91.242,
+      "first_50_batch_loss": 0.383989782333374,
+      "last_50_batch_loss": 0.3376972341537476,
+      "peak_allocated_mib": 1044.1953125,
+      "peak_reserved_mib": 1166.0,
+      "finite_gradients_checked_every_step": true,
+      "all_parameters_finite": true,
+      "classifier_weight_change_l2": 0.004994793329387903,
+      "optimizer_step_count": 782,
+      "warmup_included_in_epoch_time": false,
+      "validation": {
+        "examples": 10000,
+        "top1_percent": 87.81,
+        "loss": 0.5027246166229248,
+        "wall_seconds": 10.81720360000054,
+        "precision": "strict FP32"
+      },
+      "checkpoint": "C:\\Projects\\gpu-unlock\\results\\training-cifar100-20261026-205139\\finetuned-bf16.pth",
+      "checkpoint_sha256": "57cb4ac2fb8a644cdab35b1d4c4e412457b973de2bf7a1cf12449694957f829f",
+      "telemetry": {
+        "active_samples": 80,
+        "median_power_w": 112.2915,
+        "median_sm_mhz": 1777.0,
+        "maximum_temperature_c": 82
+      }
+    },
+    {
+      "mode": "fp16",
+      "examples": 50000,
+      "steps": 782,
+      "wall_seconds": 381.9782520000008,
+      "images_per_second": 130.89750460452888,
+      "data_wait_seconds": 7.386432000025707,
+      "median_cuda_stream_step_ms": 457.10398864746094,
+      "train_loss": 0.3836128357124329,
+      "train_top1_percent": 91.254,
+      "first_50_batch_loss": 0.38158310413360597,
+      "last_50_batch_loss": 0.3379985561966896,
+      "peak_allocated_mib": 1044.19677734375,
+      "peak_reserved_mib": 1166.0,
+      "finite_gradients_checked_every_step": true,
+      "all_parameters_finite": true,
+      "classifier_weight_change_l2": 0.004978266078978777,
+      "optimizer_step_count": 782,
+      "warmup_included_in_epoch_time": false,
+      "validation": {
+        "examples": 10000,
+        "top1_percent": 87.85,
+        "loss": 0.5024545893669129,
+        "wall_seconds": 10.901356099999248,
+        "precision": "strict FP32"
+      },
+      "checkpoint": "C:\\Projects\\gpu-unlock\\results\\training-cifar100-20261026-205139\\finetuned-fp16.pth",
+      "checkpoint_sha256": "928a04d5496705d519685f8286b65196431baf4d66159020f0b11881ff43ac18",
+      "telemetry": {
+        "active_samples": 689,
+        "median_power_w": 119.243,
+        "median_sm_mhz": 1897,
+        "maximum_temperature_c": 87
+      }
+    }
+  ],
+  "maximum_temperature_c": 87,
+  "scope": "Precision comparison with existing unlock at zero offset; no locked-GPU stock comparison",
+  "original_files_preserved": true
+}

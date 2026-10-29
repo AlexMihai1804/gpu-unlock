@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "checks": {
+    "completed": true,
+    "eight_mode_results": true,
+    "all_numeric_checks": true,
+    "source_unchanged": true,
+    "required_flags": true,
+    "offsets_preserved": true,
+    "final_graphics_150_memory_zero": true,
+    "same_boot_secure_boot": true,
+    "no_hardware_driver_events": true,
+    "no_training": true,
+    "no_device_settings_changes": true,
+    "fp16_two_run_identity": true,
+    "bf16_two_run_identity": true,
+    "tf32_two_run_identity": true,
+    "fp32_two_run_identity": true
+  },
+  "modes": {
+    "fp16": {
+      "run1_tflops": 43.99111921022373,
+      "run2_tflops": 43.153789789786195,
+      "run2_vs_run1_percent": -1.9034055861050558,
+      "identity": true
+    },
+    "bf16": {
+      "run1_tflops": 45.17833343684357,
+      "run2_tflops": 44.358224778206356,
+      "run2_vs_run1_percent": -1.8152698345627938,
+      "identity": true
+    },
+    "tf32": {
+      "run1_tflops": 23.60320876714154,
+      "run2_tflops": 23.415998762390302,
+      "run2_vs_run1_percent": -0.7931548909225206,
+      "identity": true
+    },
+    "fp32": {
+      "run1_tflops": 9.35153104416509,
+      "run2_tflops": 9.304756048413198,
+      "run2_vs_run1_percent": -0.5001854298615438,
+      "identity": true
+    }
+  },
+  "wall_seconds": 209.659225,
+  "max_temperature_c": 83,
+  "active_samples": 387,
+  "limiter_sample_percent": {
+    "power": 99.74160206718346,
+    "sw_thermal": 0.0,
+    "hw_thermal": 0.0,
+    "hw_power_brake": 0.0
+  },
+  "median_active_power_w": 119.609,
+  "observed_enforced_limit_w": {
+    "min": 106.7,
+    "max": 120.0
+  },
+  "telemetry_errors": [],
+  "stock_before_after_comparison_performed": false,
+  "locked_reference_compatible_with_this_protocol": false,
+  "protocol": {
+    "n": 8192,
+    "warmup_seconds_per_mode": 20,
+    "samples": 5,
+    "iterations": 20,
+    "full_runs": 2,
+    "modes": [
+      "fp16",
+      "bf16",
+      "tf32",
+      "fp32"
+    ],
+    "accumulation": "FP32",
+    "output": "FP32",
+    "timing": "CUDA events"
+  },
+  "environment_difference": "Report: Linux torch 2.14.1+cu130; this run uses existing Windows torch 2.8.0+cu126"
+}

@@ -1,0 +1,16 @@
+# Separate .venv-vm only. Install virt-firmware with --no-deps as documented.
+appdirs==1.4.4
+certifi==2026.10.23
+cffi==2.1.1
+charset-normalizer==3.5.2
+cryptography==50.0.2
+fs==2.4.16
+idna==3.20
+pefile==2024.8.26
+pycparser==3.12
+pyfatfs==1.1.0
+PyYAML==6.0.3
+requests==2.34.2
+setuptools==80.9.0
+six==1.17.0
+urllib3==2.8.0

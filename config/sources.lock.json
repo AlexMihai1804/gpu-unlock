@@ -1,0 +1,22 @@
+{
+  "repositories": [
+    {"folder":"rtx30-unlock","url":"https://github.com/craftingmod/rtx30-unlock.git","commit":"5c076dc4ee7fa369639669fa591ac74d8f6dfcd8"},
+    {"folder":"ga106","url":"https://github.com/predator0321/rtx3060-ga106-uefi-experiment.git","commit":"ca3041b77eb933c594bfd637bb6c71107bef94d2"},
+    {"folder":"gpu-unlock","url":"https://github.com/Zagitta/gpu-unlock.git","commit":"af28cbbfd3d922a659227ecfb7369adfd924cf03"},
+    {"folder":"shim","url":"https://github.com/rhboot/shim.git","commit":"4dc4a1bf85542706d345230eb72a0e52d6f0c452"}
+  ],
+  "llvm": {
+    "url":"https://github.com/mstorsjo/llvm-mingw/releases/download/20261020/llvm-mingw-20261020-ucrt-x86_64.zip",
+    "sha256":"fd5462b7f5d93b2ff981fcd3f9c7e427e47f3203c64ea91c27bcc444eebd74cd"
+  },
+  "qemu_vm_only": {
+    "url":"https://qemu.weilnetz.de/w64/qemu-w64-setup-20260811.exe",
+    "sha512":"5bcf9eed634e8575a37b74f445af41a2fe4106da512d0c30c368301d4c105037fdfab40a5287367a28a957624cddebbc8c07e16c88ab6634f554cdf3d16bf543",
+    "extraction_only":true,
+    "version":"11.1.0"
+  },
+  "shim_packages": [
+    {"package":"shim-signed","version":"1.51~1+deb13u1+16.1-2~deb13u1","filename":"pool/main/s/shim-signed/shim-signed_1.51~1+deb13u1+16.1-2~deb13u1_amd64.deb","sha256":"3c802fa303c0e6bf126adee74028d1042e3120360d159c2c05181dc9b2f61005"},
+    {"package":"shim-helpers-amd64-signed","version":"1+16.1+2~deb13u1","filename":"pool/main/s/shim-helpers-amd64-signed/shim-helpers-amd64-signed_1+16.1+2~deb13u1_amd64.deb","sha256":"7e950d75d5a40ecc0a99f727452ce35780b47a04d9a2cc3b1ff7c2bb316c033e"}
+  ]
+}

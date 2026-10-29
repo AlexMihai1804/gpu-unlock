@@ -1,0 +1,35 @@
+{
+  "mode": "bf16",
+  "examples": 50000,
+  "steps": 782,
+  "wall_seconds": 65.71438040000066,
+  "images_per_second": 760.8684689051636,
+  "data_wait_seconds": 7.598620899986599,
+  "median_cuda_stream_step_ms": 52.58123207092285,
+  "train_loss": 0.3848458404541016,
+  "train_top1_percent": 91.242,
+  "first_50_batch_loss": 0.383989782333374,
+  "last_50_batch_loss": 0.3376972341537476,
+  "peak_allocated_mib": 1044.1953125,
+  "peak_reserved_mib": 1166.0,
+  "finite_gradients_checked_every_step": true,
+  "all_parameters_finite": true,
+  "classifier_weight_change_l2": 0.004994793329387903,
+  "optimizer_step_count": 782,
+  "warmup_included_in_epoch_time": false,
+  "validation": {
+    "examples": 10000,
+    "top1_percent": 87.81,
+    "loss": 0.5027246166229248,
+    "wall_seconds": 10.81720360000054,
+    "precision": "strict FP32"
+  },
+  "checkpoint": "C:\\Projects\\gpu-unlock\\results\\training-cifar100-20261026-205139\\finetuned-bf16.pth",
+  "checkpoint_sha256": "57cb4ac2fb8a644cdab35b1d4c4e412457b973de2bf7a1cf12449694957f829f",
+  "telemetry": {
+    "active_samples": 80,
+    "median_power_w": 112.2915,
+    "median_sm_mhz": 1777.0,
+    "maximum_temperature_c": 82
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": "M6501RM",
+  "bios": "M6501RM.313",
+  "pci": "0000:01:00.0",
+  "identity": "0x252010de",
+  "subsystem": "0x13131043",
+  "class_revision": "0x030000a1",
+  "fb_mib": 6144,
+  "vbios": "94.06.38.00.38",
+  "windows_partition": "11111111-1111-4111-8111-111111111111",
+  "chip": null,
+  "prom_sha256": null,
+  "evidence_reviewed": false
+}

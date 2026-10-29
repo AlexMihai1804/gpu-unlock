@@ -1,0 +1,141 @@
+{
+  "graphics": {
+    "0": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 0,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "1": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 1,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "2": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 2,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "3": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 3,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "4": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 4,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "5": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 5,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "6": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 6,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "7": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 7,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "8": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 8,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "9": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 9,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "10": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 10,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "11": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 11,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "12": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 12,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "13": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 13,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "14": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 14,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "15": {
+      "version": 16777240,
+      "type": 0,
+      "pstate": 15,
+      "offset": 150,
+      "minimum": -1000,
+      "maximum": 1000
+    }
+  },
+  "memory": {
+    "version": 16777240,
+    "type": 2,
+    "pstate": 0,
+    "offset": 0,
+    "minimum": -2000,
+    "maximum": 6000
+  },
+  "utc": "2026-10-29T08:46:12.105509+00:00"
+}

@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "utc": "2026-10-26T17:41:55.026093+00:00",
+  "benchmark": "persistent-dense-tf32",
+  "configuration": {
+    "seconds": 300,
+    "iterations": 100,
+    "temperature_limit": null,
+    "thermal_pacing": false,
+    "device": 0,
+    "baseline": "C:\\Projects\\gpu-unlock\\results\\baseline-2026-10-25.json",
+    "output_directory": "C:\\Projects\\gpu-unlock\\results\\automatic-tf32-physical-20261026-193847\\tf32-endurance",
+    "modes": [
+      "tf32"
+    ]
+  },
+  "source_sha256": "5729aca9b756b5adb95e8cc38b4816b2d9522325549f30eff26f57117a7e73d3",
+  "baseline_sha256": "567d97b4cdcd804b57bf232d510ca568f76f82da42d42c0043c95ece180323ce",
+  "packages": {
+    "numpy": "2.4.2",
+    "nvidia-cublas-cu12": "12.9.2.10",
+    "nvidia-cuda-runtime-cu12": "12.9.79",
+    "nvidia-cuda-nvrtc-cu12": "12.9.86"
+  },
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "NVIDIA_TF32_OVERRIDE": null,
+    "CUBLAS_WORKSPACE_CONFIG": null
+  },
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, NVIDIA GeForce RTX 3060 Laptop GPU, 00000000:01:00.0, 0x252010DE, 580.97, 94.06.38.00.38, 6144",
+    "stderr": ""
+  },
+  "n": 8192,
+  "accumulation": "FP32",
+  "output": "FP32",
+  "math_mode": "DEFAULT | DISALLOW_REDUCED_PRECISION_REDUCTION (16)",
+  "no_configuration_changes": true,
+  "status": "passed",
+  "completed": true,
+  "load_policy": "continuous",
+  "pause_temperature_c": null,
+  "resume_temperature_c": null,
+  "limits": [
+    "Fixed GEMM inputs; this is not all-application or sleep/resume validation",
+    "Per-block hashes cover final GEMM outputs, not every intermediate multiply",
+    "CUDA event timings exclude output validation and telemetry overhead"
+  ],
+  "cublas_version": 120902,
+  "load_started_utc": "2026-10-26T17:42:05.703610+00:00",
+  "load_wall_seconds": 300.68498710000006,
+  "finished_utc": "2026-10-26T17:47:06.393028+00:00",
+  "results": {
+    "tf32": {
+      "blocks": 59,
+      "gemm_count": 5900,
+      "cuda_seconds": 286.4620712890625,
+      "median_tflops": 22.550692130302995,
+      "min_tflops": 21.931926614287505,
+      "max_tflops": 23.419206680654764,
+      "p5_tflops": 22.286598289864024,
+      "p95_tflops": 23.196768369430128,
+      "first_quarter_median_tflops": 23.091151807419863,
+      "last_quarter_median_tflops": 22.424180227207046,
+      "last_vs_first_quarter_percent": -2.8884292380707444,
+      "all_numeric_checks_passed": true,
+      "max_sample_relative_l2": 0.0002816515001149331
+    }
+  },
+  "validated_blocks": 59,
+  "cooling_pauses": 0,
+  "cooling_seconds": 0.0,
+  "minimum_cuda_load_fraction": 0.7,
+  "telemetry_samples": 288,
+  "health_polls": 14,
+  "maximum_temperature_c": 85.0,
+  "cuda_seconds": 286.4620712890625,
+  "cuda_load_fraction": 0.9526982841806886,
+  "hardware_events": []
+}

@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "transaction": {
+    "passed": true,
+    "ss0": "0x88888888",
+    "entry_ss1": "0x3",
+    "final_ss1": "0x8",
+    "FLRs": 1,
+    "dma_mappings_remaining": 0,
+    "pci_attributes_restored": true
+  },
+  "trust": {
+    "secure_boot": true,
+    "setup_mode_zero": true,
+    "shim_validation_enabled": true,
+    "platform_keys_and_revocations_unchanged": {
+      "PK": true,
+      "KEK": true,
+      "db": true,
+      "dbx": true
+    },
+    "new_automatic_hash_in_MOK": true,
+    "previous_MOK_hashes_preserved": true,
+    "old_automatic_entry_unchanged": true,
+    "windows_entry_unchanged": true,
+    "tf32_entry_matches_installed": true
+  },
+  "boot_current": 6,
+  "boot_order_at_collection": [
+    1,
+    0,
+    6
+  ],
+  "tf32_first_at_collection": false,
+  "windows_boot_utc": "2026-10-26T17:36:35.5000000Z",
+  "log": "C:\\Projects\\gpu-unlock\\results\\automatic-tf32-physical-20261026-193847\\RTX-UNLOCK\\RUN0000\\UNLOCK.TXT",
+  "log_sha256": "f2d2668f96e92b831efaad81f73393e0fc2a6d414ac807b26d9d652ab1f5a079",
+  "evidence_is_tpm_attestation": false,
+  "comparison_vs_stock": [
+    {
+      "mode": "fp16",
+      "before_tflops": 27.204420310143743,
+      "after_tflops": 42.03861172850384,
+      "gain_percent": 54.52860692947334,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "bf16",
+      "before_tflops": 27.6939571958144,
+      "after_tflops": 45.0763762550089,
+      "gain_percent": 62.766107914045755,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "tf32",
+      "before_tflops": 13.86525333812943,
+      "after_tflops": 23.46658649612363,
+      "gain_percent": 69.24744123924908,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "fp32",
+      "before_tflops": 9.343239127525486,
+      "after_tflops": 9.326367123063172,
+      "gain_percent": -0.18057982068133693,
+      "output_bit_identical": true
+    }
+  ],
+  "comparison_vs_recent_ss0_only": [
+    {
+      "mode": "fp16",
+      "before_tflops": 41.94517190523121,
+      "after_tflops": 42.03861172850384,
+      "gain_percent": 0.22276657605251327,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "bf16",
+      "before_tflops": 43.2506967177579,
+      "after_tflops": 45.0763762550089,
+      "gain_percent": 4.221156364635892,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "tf32",
+      "before_tflops": 13.537484648725288,
+      "after_tflops": 23.46658649612363,
+      "gain_percent": 73.34524917325228,
+      "output_bit_identical": true
+    },
+    {
+      "mode": "fp32",
+      "before_tflops": 9.021192929212788,
+      "after_tflops": 9.326367123063172,
+      "gain_percent": 3.3828585226479024,
+      "output_bit_identical": true
+    }
+  ],
+  "coarse_per_clock_modes": {
+    "fp16": {
+      "tflops": 42.03861172850384,
+      "active_samples": 8,
+      "median_sm_mhz": 1425.0,
+      "median_power_w": 113.05,
+      "maximum_temperature_c": 66.0,
+      "tflops_per_ghz": 29.50078016035357,
+      "normalized_vs_stock": 1.9150703146487715
+    },
+    "bf16": {
+      "tflops": 45.0763762550089,
+      "active_samples": 9,
+      "median_sm_mhz": 1500.0,
+      "median_power_w": 114.11,
+      "maximum_temperature_c": 68.0,
+      "tflops_per_ghz": 30.050917503339267,
+      "normalized_vs_stock": 1.9933422682540134
+    },
+    "tf32": {
+      "tflops": 23.46658649612363,
+      "active_samples": 12,
+      "median_sm_mhz": 1582.0,
+      "median_power_w": 119.215,
+      "maximum_temperature_c": 69.0,
+      "tflops_per_ghz": 14.83349336038156,
+      "normalized_vs_stock": 1.965281602759169
+    },
+    "fp32": {
+      "tflops": 9.326367123063172,
+      "active_samples": 17,
+      "median_sm_mhz": 1545.0,
+      "median_power_w": 119.79,
+      "maximum_temperature_c": 71.0,
+      "tflops_per_ghz": 6.0364835747981695,
+      "normalized_vs_stock": 1.0027167645197577
+    }
+  },
+  "all_full_outputs_bit_identical": true,
+  "tf32_acceleration_supported": true,
+  "unexpected_driver_or_hardware_events": [],
+  "known_corrected_network_events": 1,
+  "limits": [
+    "One physical boot; separate sustained validation and later reboot/sleep persistence",
+    "Clock normalization uses active phase samples, not exact CUDA event windows"
+  ]
+}
